@@ -1,0 +1,118 @@
+.content{   
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 50px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(198, 208, 218, 0.2);
+    background-color: white;
+    opacity: 0.64;
+    padding: 0.5rem 0.5rem;
+    position: relative;
+}
+#input-form{
+    margin-bottom: 20px;
+    color: black;
+    position: relative;
+}
+.name{
+    float: left !important;  
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    margin-left: 2em; 
+    margin-right: 2em; 
+    position: relative;
+}
+h1{
+    color:#3fdb3a;
+    margin-left: 170px;
+    font-size: 40px;
+}
+
+input[type="text"], input[type="email"]{
+    width: 16em;
+    margin-left: 1.95cm; 
+    margin-bottom: 0.5em; 
+    font-size: 20px;
+
+}
+.button{
+    display: block;
+    padding: .75rem 2rem;
+    outline: none;
+    border: none;
+    background-color: #AAF342;
+    color: #000;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.button:hover{
+    padding: 1rem 2.2rem;
+    font-size: 1.3rem;
+}
+.button1{
+    margin-left: 500px;
+    padding: .8rem 1.3rem;
+    outline: none;
+    border: none;
+    background-color: #AAF342;
+    color: #000;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration:none;    
+    margin-top: 100px;
+}
+.button1:hover{
+    padding: 1.1rem 1.5rem;
+    font-size: 1.3rem;
+}
+br{
+    clear: both;
+}
+#submit{
+    margin-left: 170px;
+    font-size: 20px;
+    margin-bottom: 20px; 
+}
+#submit1{
+    margin-left: 170px;
+    font-size: 20px;
+    margin-bottom: 40px; 
+}
+#p_size{
+    font-size: 25px;
+    margin-left: 80px;
+}
+html{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+.f_input{
+    width: 64%;
+    height: 100%;
+    font-size: 20px;
+    border: 1px solid #545454;
+    border-radius: .5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+    margin-left: 2cm;
+}
+.in4{
+    padding: 10px;
+    font-size: 20px;
+}
+.is{
+    margin-left: 30px;
+}

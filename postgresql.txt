@@ -1,0 +1,205 @@
+create table userdb(
+    iduser int not null primary key,
+    firstname varchar(100) not null,
+    lastname varchar(100) not null,
+    email varchar(100) not null,
+    password varchar(100) not null,
+    address varchar(5000),
+    phonenumber varchar(20),
+    creditcardtype varchar(50),
+    creditcardnumber varchar(100),
+    creditcardexprationdate date
+);
+
+insert into userdb(iduser,firstname,lastname,email,password) 
+            values (1,'Danh','Le','danhle12@gmail.com','123456789');
+insert into userdb(iduser,firstname,lastname,email,password)
+            values (2,'Tan','Nguyen','tandeptrai@gmail.com','tanhandsome');
+insert into userdb(iduser,firstname,lastname,email,password)
+            values (3,'Thang','Pham','nyhbantan@gmail.com','botcocnha');
+
+create table typedb(
+    idtype int not null primary key,
+    nametype varchar(100) not null
+);
+
+insert into typedb(idtype,nametype) values (1,'Vegetable');
+insert into typedb(idtype,nametype) values (2,'Necessary');
+insert into typedb(idtype,nametype) values (3,'Others');
+
+create table productdb(
+    idproduct int not null primary key,
+    nameproduct varchar(50) not null,
+    numstar int,
+    numreview int,
+    notenum varchar(100),
+    price int not null,
+    description varchar(5000),
+    idtype int not null,
+
+    foreign key (idtype) references typedb (idtype)
+);
+
+-- 1 ớt chuông 1 rau củ // 1 bellpepper 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(1,'Bell Pepper',0,0,'kg',40000,
+'Bell peppers are a variety of chili peppers with large fruits, thick and crispy flesh. In particular, bell peppers are vegetables with a variety of colors (including green, yellow, orange, red and black) as well as different flavors and spiciness. Green bell peppers have a characteristic pungent flavor, while red and yellow bell peppers are usually sweeter. Yellow bell peppers are used to make aromatic oils and chutneys when you want to cut down on the spiciness.'
+,1);
+
+-- 2 bắp cải xanh 1 rau củ // 2 broccoli 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(2,'Broccoli',0,0,'kg',70000,
+'Broccoli (cauliflower) is a very nutritious vegetable that is full of vitamins, minerals, fiber and antioxidants. According to research, it has been shown to reduce the risk of cancer in some organs such as breast, prostate, stomach, kidney, bladder. Broccoli is shaped like a tree. Unlike cauliflower, broccoli can be eaten with both the stem and the flower part. Their bodies are round and hard. The cotton part has tiny cotton seeds at the top.'
+,1);
+
+-- 3 bắp cải 1 rau củ // 3 cabbage 1 vegetable kg--
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(3,'Cabbage',0,0,'kg',20000,
+'Cabbage is a very familiar food, very easy to buy and process into many different dishes in daily meals. White cabbage is especially beneficial in supporting cancer prevention and overall health. White cabbage (sugar cabbage) is always a familiar ingredient in the kitchen of every Vietnamese family. Cabbage has a characteristic sweet taste and certain crispiness. Not only that, they are also considered as a magnet to attract diseases from the body, especially to help the body relieve pain, cough, phlegm, stomach ulcers ...According to medical studies, cabbage is a type of tuber rich in content. vitamins A, C, anti-cancer agents to help increase red blood cells, detoxify the body,...'
+,1);
+
+--4 cà rốt 1 rau củ // 4 carrot 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(4,'Carrot',0,0,'kg',17000,
+'Carrot is a very familiar root in Vietnamese dishes. This tuber has a high content of nutrients and vitamin A, is considered an essential ingredient for childrens weaning dishes, helps children to have bright eyes and provides a rich source of fiber. Carrots are not only a familiar root in family dishes but also a valuable medicine, very good for health. With a high content of nutrients and vitamin A, carrots are considered an essential ingredient for childrens weaning dishes, helping children to have bright eyes and providing a rich source of fiber. In addition, carrots are also considered a "panacea" in the skin care process of women. With just a few simple steps, you have a carrot - honey mask that helps prevent acne, brightens skin and improves dull and aging skin.'
+,1);
+
+--5 bắp 1 rau củ // 5 corn 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(5,'Corn',0,0,'kg',35000,
+'American corn is a food that is grown a lot all over the world. This is a delicious fruit that is rich in minerals and vitamins. Corn can be processed into many delicious dishes such as: corn rice, corn tea, corn milk, ... any dish creates a great taste. The World Nutrition Organization has researched and analyzed the nutritional components of American corn. Accordingly, this fruit contains a variety of minerals and vitamins such as protein, calories, copper, iron, selenium, zinc, niacin, A, E, C, B3, B1, thiamine... In addition, American corn also contains Contains cellulose, fiber that is very good for the digestive system. It can be said that this is a cereal rich in nutrients, delicious taste, easy to eat, easy to prepare, along with beautiful colors to bring a lot more eye-catching and attractive to the dish.'
+,1);
+
+--6 dưa leo 1 rau củ // 6 cucumber 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(6,'Cucumber',0,0,'kg',20000,
+'Cucumber is grown quite a lot in our country, this is a very delicious vegetable, almost familiar in all meals in every family. Cucumber contains a lot of nutrients and vitamins that are very good for the body. In addition, cucumber can also be used to beautify very effectively. Cucumber, also known as cucumber, is a fruit of the Gourd family, when eaten, it has a light and cool taste. This fruit has a high water and fiber content along with healthy minerals. Therefore, cucumber is not only used as a cooking ingredient but also considered a miracle drug in beauty.'
+,1);
+
+--7 khoai tây 1 rau củ // 7 potato 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(7,'Potato',0,0,'kg',40000,
+'Potatoes are so familiar to each of us. This type of tuber that appears regularly on this tray of rice has many useful uses. It is not only good for health and beauty, but also has many other beneficial effects. Potatoes can be made into soups, soups, or fried. Potato belongs to the eggplant family, is a versatile tuber with high nutrient content, so many households in Vietnam have chosen potatoes as a main dish in their daily meals. Possessing a rich source of vitamins and minerals, potatoes bring many health benefits such as anti-inflammatory, pain relief, strengthening the immune system, stimulating digestion, ...'
+,1);
+
+--8 cà chua 1 rau củ // 8 tomato 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(8,'Tomato',0,0,'kg',31500,
+'Tomato As a vegetable that is very good for the health of the user, this vegetable not only helps to add essential nutrients to the body but also helps to beautify the skin for women. Tomatoes can be eaten raw or processed into very delicious dishes. Tomatoes are considered an essential food because they are very familiar to create many delicious daily dishes for the family. This is also considered a very nutritious and healthy tuber, has the effect of enhancing the bodys resistance, preventing and treating debilitating diseases, and fighting infections. Not only that, tomatoes also contain high levels of vitamin A, which brings many health benefits.'
+,1);
+
+--9 khoai lang 1 rau củ // 9 sweetpotato 1 vegetable kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(9,'Sweetpotato',0,0,'kg',36000,
+'Sweet potato is a dish that is loved by many people, grown and has roots all year round, best when grilled on a charcoal stove. This tuber has a sweet taste like honey that melts on the tip of the tongue. Japanese sweet potatoes contain many vitamins A, B, C and many minerals necessary for beautiful skin. Japanese sweet potato is a tuber with a long, slender shape. With purple outer shell, yellow inside, sweet and gentle flavor, it has won the hearts of many people. In Oriental medicine, sweet potato has a sweet taste, is average, has the effect of laxative, nourishing the body, anti-inflammatory, beneficial for bile, bright eyes, .. especially eating potatoes in the morning will help you provide adequate nutrition. nourish the body, especially cure many dangerous diseases that you do not expect.'
+,1);
+
+--10 cháo 2 nhu yếu phẩm // 10 congee 2 neccessary package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(10,'Congee',0,0,'package',8000,
+'Convenient instant porridge products from Vifon brand. Vifon Minced Meat Porridge 70g pack is made from fresh ingredients that are safe for health, especially there is a package of quality minced meat, delicious, nutritious enough for a meal that is very quick and simple. Rice (60%). SPICE PACK - Salt, flavor enhancer (monosodium glutamate, disodium 5-guanylate, disodium 5-inosinat), refined sugar, dried vegetables (carrots, green onions), pepper, anti-caking agent (551) . PACK OF BOMB - Water, minced pork (10%), imitation meat (defatted soybean meal), refined palm oil, red onion, thickener (1422), soy sauce, garlic, fish sauce, conditioner flavor (monosodium glutamate, disodium 5-guanylate, disodium 5-inosinat), refined sugar, salt, pepper, synthetic and natural coriander flavor, natural coloring (natural carotene (plant extract) )), antioxidants (mixed tocopherol (vitamin E)).'
+,2);
+
+--11 yến mạch 2 nhu yếu phẩm // 11 porridge 2 neccessary package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(11,'Porridge',0,0,'package',68000,
+'Porridge are highly nutritious, containing soluble fiber, protein and the B vitamins, thiamin, riboflavin and B6. Xuan An Organic Oats 400g bag is very easy to prepare, just mix oats with boiling water or mix with fresh milk, yogurt, you can add fruit... Xuan An Organic Oats from... 100% organic oats imported from Australia, providing many uses from health to beauty. Oats are also known as Avena Sativa, is a grain cereal, rich in vitamins, nutrients and compounds. antioxidant. Oats are very benign, hypoallergenic, and can be substituted for rice in the diet.'
+,2);
+
+--12 dầu ăn 2 nhu yếu phẩm // 12 olive 2 neccessary package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(12,'Olive oil',0,0,'bottle',70000,
+'Pressed from extra virgin olives, always keeping the perfect natural flavor. Olive oil contains a lot of unsaturated fats that are very good for the body. Not only used in cooking, this oil is also trusted by women in beauty care. Today, choosing cooking oil is no longer an easy problem when the health balance is always a top priority for housewives. Of all the cooking oils on the market, olive oil is known to be rich in antioxidants that help protect the body from cell damage - a factor that can lead to a wide range of health conditions and conditions. diseases. Tuong An cooking oil understands the health concerns of consumers, has researched and launched the Extra Virgin Olive Oil product in Tuong An 500ml bottle with extremely high quality and convenience.'
+,2);
+
+--13 trứng 2 nhu yếu phẩm // 13 egg 2 neccessary blister
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(13,'Eggs',0,0,'dozen',23000,
+'Box of 10 fresh eggs of Happy Egg is packed and preserved according to strict standards of hygiene and food safety, ensuring the quality of food. Eggs are big and round. Chicken eggs can be boiled and processed into a number of other dishes such as: braised meat with eggs, fried rice with eggs, ... Chicken eggs are a food containing many nutrients, providing high protein, providing high protein content. fats and vitamins and minerals. T.Food chicken eggs are produced on a clean and quality farm, so customers can be assured of the product.'
+,2);
+
+--14 nước mắm 2 nhu yếu phẩm // 14 fishsauce 2 neccessary bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(14,'Fish Sauce',0,0,'bottle',28000,
+'Made from fresh anchovy fish sauce through the traditional brewing method combined with modern production technology. Huong Viet Cholimex fish sauce 750ml bottle from Cholimex fish sauce brand is used to dip directly with food or add garlic and chili and mix to taste. Anchovy fish sauce (50%), salt, water, sugar, flavor enhancer, synthetic fish sauce flavor, color, preservative.'
+,2);
+
+--15 mì tôm 2 nhu yếu phẩm // 15 noodle 2 neccessary package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(15,'Noodle',0,0,'package',3500,
+'The delicious yellow noodles blend in the spicy and sour shrimp soup, imbued with each strand of noodles with a seductive aroma. Hao Hao noodles with spicy and sour shrimp flavor 75g package is an attractive choice not to be missed, especially for busy days that need to replenish energy quickly and simply but still have enough quality. Spicy and sour shrimp noodles are the favorite and familiar flavor of instant noodles for Vietnamese people. However, few people know that Hao Hao was the first brand to introduce this flavor in the Vietnamese market 20 years ago. With Hao Hao, you will have a completely different culinary experience with delicious chewy noodles combined with rich soup, unique flavors, bringing emotional deliciousness right from the time of processing to enjoying. finished awake.'
+,2);
+
+--16 muối 2 nhu yếu phẩm // 16 salt 2 neccessary kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(16,'Salt',0,0,'kg',6000,
+'Sosal Group salt is a brand of table salt commonly used in every familys daily meal. Sosal Groups 1kg pack of iodized refined salt is a type of salt that has been dried, with fine white particles. Salt has a characteristic color and salty taste and is used as a direct additive in kitchens.'
+,2);
+
+--17 đường 2 nhu yếu phẩm // 17 sugar 2 neccessary kg
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(17,'Sugar',0,0,'kg',20000,
+'The product applies advanced technology, extracts sugar from the best sugar cane, does not use bleaching chemicals. Bien Hoa premium cane sugar has a sweet, delicious, attractive taste, has a natural white color, is easy to dissolve, so it can be used to process many dishes and prepare many other drinks. Currently, on the market, there are many brands specializing in the production and supply of different types of sugar, of which Bien Hoa is proud to be the most popular and friendly sugar producer brand with the product High Sugar Cane Sugar. Bien Hoa grade 1kg package is extremely convenient and high quality. In the production process of refined sugar, no bleaching chemicals are used, but impurities are still removed, fully meeting food safety and hygiene standards.'
+,2);
+
+--18 sữa tươi 2 nhu yếu phẩm // 18 milk 2 neccessary bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(18,'Milk',0,0,'bottle',30400,
+'Made from 100% fresh milk, containing many nutrients such as vitamins A, D3, calcium, ... good for bones and immune system. Vinamilk fresh milk is the top trusted brand with excellent quality. Low-sugar fresh milk Vinamilk 100% Fresh milk in 1 liter box is delicious and nutritious.'
+,2);
+
+--19 bột giặt 3 khác // 19 washingpowder 3 orther package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(19,'Washing Powder',0,0,'package',115000,
+'Washing powder has the ability to swirl away stubborn stains after only 1 wash for clean white clothes. OMO laundry detergent combines comfort aromatic essential oil with extracts of jasmine and sandalwood to leave a lasting fragrance. OMO Comfort washing powder with fragrant essential oil 2.7kg - the familys choice.'
+,3);
+
+--20 nước rửa chén 3 khác // 20 diswashingliquid 3 orther bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(20,'Diswashing Liquid',0,0,'bottle',27000,
+'Helping to thoroughly remove the fishy smell on your dishes with just 1 wash, Sunlight dishwashing liquid also effectively kills bacteria, is the favorite brand of dishwashing liquid for millions of housewives. Sunlight Lemon Dishwasher 100 fresh lemon extract 725ml bottle removes grease with the power of 100 lemons.'
+,3);
+
+--21 khẩu trang 3 khác // 21 mask 3 orther box
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(21,'Mask',0,0,'box',35000,
+'Ecom MED Safe Mask with 4 layers of optimal protection against the penetration of pathogens through the respiratory tract, water resistance, resistance to droplets, filtering fine dust, bacteria, viruses and pathogens. Good elastic band does not make the user feel short of breath and does not cause ear pain. The mask has 4 layers and a good elastic band that does not make the user feel breathless and does not cause ear pain, creating a comfortable feeling during use. Ecom MED masks with the criterion of giving customers a sense of security with all materials have certificates and clear origin and are certified by the Ministry of Health to meet standards. The product is completely free of heavy metals that are harmful to health such as: Lead, Mercury, Arsenic, Antimony, Cadmium, etc., ensuring safety when in contact with all skin types. More specifically, this type of mask is manufactured on modern automatic lines of Germany and Taiwan, the goods meet export standards to Europe and the US, you can rest assured when using it.'
+,3);
+
+--22 giấy vệ sinh 3 khác // 22 paper 3 orther package
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(22,'Paper',0,0,'roll',60000,
+'From 100% premium, non-toxic virgin pulp, 5 pairs of PREMIER Deluxe 3-layer toilet paper provide comfortable use with many uses such as serving for parties as napkins, towels. wipe hands for customers, or to use in the toilet... very versatile. PREMIER toilet paper is safe, non-toxic, well received and used daily in households, offices and schools... PREMIER - Vietnam brand toilet paper is a quality product. Good, packaged in pairs, helping families to spend more economically. In addition, the remaining paper rolls can be preserved without the outer layer being dirty when the need for use is low.'
+,3);
+
+--23 nước xúc miệng 3 khác // 23 mouthwash 3 orther bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(23,'Mouthwash',0,0,'bottle',70000,
+'Listerine mouthwash is made in Thailand. Mouthwash helps to effectively clean the oral cavity, take care of the gums and bring natural fresh breath. Listerine Cool Mint Mouthwash 500ml has a pleasant green tea fragrance, clean and fresh teeth. 24-hour protection against bacteria that cause plaque and gingivitis. Cleans the oral cavity 6 times more than brushing and flossing alone. The unique formula with 4 essential oils helps to penetrate deep inside the oral cavity to kill bacteria in the biofilm.'
+,3);
+
+--24 nước rửa tay 3 khác // 24 handwashing 3 orther bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(24,'Handwashing',0,0,'bottle',23000,
+'Products of the Puri brand with unique formulas and extracts, help protect hands, fight bacteria, and keep hands hygienic. Helps keep hands moist, for hands not to dry out after use. Suitable for travel, convenient for cleaning. Puri hand sanitizer with green tea flavor 500ml bottle is a product of Puri brand with a unique formula and extract, helping to protect hands, fight bacteria, and keep hands hygienic. Helps keep hands moist, for hands not to dry out after use. The product is suitable for travel, convenient for cleaning your hands immediately after contact with public surfaces. In addition, with natural nutrients in the composition of hand sanitizers such as green tea for a cool and pleasant fragrance. Gentle, delicate green tea scent with effective deodorizing ability will help you remove the smell of food on your hands. Clean and moisturize hands.'
+,3);
+
+--25 xà phòng cục 3 khác // 25 soap 3 orther box
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(25,'Soap',0,0,'bar',12000,
+'Lifebuoy soap bars help protect you and your family from 10 types of harmful health diseases transmitted through the skin thanks to the silver ion formula. Lifebuoy Extra Protective Bar Soap 90g leaves your skin clean and feeling refreshed. Contains silver ion formula to help protect the body from 10 health problems.'
+,3);
+
+--26 kem đánh răng 3 khác // 26 toothpaste 3 orther box
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(26,'Toothpaste',0,0,'tube',54000,
+'A toothpaste that gives you fresh breath that instills confidence and brings you closer together. Closeup Toothpaste Endless Fresh Menthol 230g Perlite micro-bright white crystal gel for a bright white smile. Clean bacteria, fresh breath for many hours.'
+,3);
+
+--27 dầu gội đầu 3 khác // 27 shampoo 3 orther bottle
+insert into productdb(idproduct,nameproduct,numstar,numreview,notenum,price,description,idtype)
+values(27,'Shampoo',0,0,'bottle',80500,
+'Clear shampoo Dutch brand, is the number 1 anti-dandruff shampoo in Vietnam. Clear anti-dandruff shampoo cool mint 874ml with 3 anti-dandruff technology: eliminate dandruff, attack dandruff, prevent dandruff from recurring and Vitamin B3 nourishes oily skin healthier. Clear shampoo with anti-dandruff technology 3 effects: eliminate dandruff, attack dandruff, prevent dandruff from recurring. With Vitamin B3 and Amino Acid active ingredient to help nourish oily skin healthier, remove oil, dirt deep in the scalp. Besides, the fresh mint essence in the shampoo will bring a feeling of coolness and refreshment all day long.'
+,3);
+
+

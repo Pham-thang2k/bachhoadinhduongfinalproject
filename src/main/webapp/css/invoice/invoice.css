@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 26, 2021, 9:05:38 AM
+    Author     : vumin
+*/
+table{
+    margin-left: 220px;
+/*    margin-top: 200px;*/
+    background-color: #eee;
+}
+td{
+    text-align: left;
+    padding: 1.5em 2.5em;
+    font-size: 18px;
+}
+h10{
+    font-size: 30px;
+    color:orange;
+    margin-left: 570px;
+}
+.in4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 13em;
+}
+.lable{
+    float: left;
+    width: 10em;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-left: 170px;
+    font-weight: 700;
+}
+.name{
+    float:left;
+}
+.lname{
+    margin-left:340px;
+}
+.email_phone{
+    float:left;
+}
+.phone{
+    margin-left:340px;
+}
+.address_cre{
+    float: left;
+}
+.cretype{
+    margin-left: 340px;
+}
+.cre{
+    float: left;
+}
+.date{
+    margin-left:340px;
+}
+.com_btn{
+    margin-top:30px;
+    margin-left: 235px;
+    background: #ff9f1a;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s;
+}
+.com_btn:hover{
+    padding: 0.475rem 0.85rem;
+    font-size: 1.1rem;
+}
+.p{
+    font-size: 18px;
+    text-align: left;
+}
+.info{
+    text-align: left ;
+    width:150% !important;
+}

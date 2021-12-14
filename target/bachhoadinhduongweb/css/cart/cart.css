@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 24, 2021, 4:08:03 PM
+    Author     : vumin
+*/
+h10{
+    color: orange;
+    font-size: 30px;
+    margin-left: 600px;
+}
+table{
+    margin-left: 250px;
+/*    margin-top: 200px;*/
+    background-color: #eee;
+}
+.quantity{
+    width: 30px;
+}
+td{
+    text-align: left;
+    padding: 1.5em;
+    font-size: 18px;
+}
+.button{
+    display: block;
+    margin-left: auto;
+    padding: .5rem 0.8rem;
+    outline: none;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.button:hover{
+    padding: .6rem 0.9rem;
+    font-size: 1.1rem;
+}
+.quan{
+    background-color: orange;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    padding: .25rem 0.5rem;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.quan:hover{
+    padding: 0.28rem 0.55rem;
+    font-size: 0.9rem;
+}
+.invoice_btn{
+    display: block;
+    margin-left: 250px;
+    margin-top: 15px;
+    padding: .5rem 0.8rem;
+    outline: none;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.invoice_btn:hover{
+    padding: .6rem 0.9rem;
+    font-size: 1.2rem;
+}
+.con_btn{
+    display: block;
+    margin-left: 250px;
+    margin-top: 15px;
+    padding: .5rem 0.8rem;
+    outline: none;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.con_btn:hover{
+    padding: .6rem 0.9rem;
+    font-size: 1.2rem;
+}
+.foot{
+    padding-bottom: 20px;
+}
+
